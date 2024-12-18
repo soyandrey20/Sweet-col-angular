@@ -1,0 +1,63 @@
+<app-navbar></app-navbar>
+
+<div class="container-fluid">
+  <div class="row justify-content-between">
+    <!-- Columna izquierda -->
+    <div class="col-12 col-md-6 position-relative">
+
+
+      <!-- Contenido del formulario -->
+      <div class="content position-relative">
+        <h1 class="text-center">{{ title }}</h1>
+        <p class="text-center">{{ textTitle }}</p>
+
+        <div class="card text-dark bg-light mb-3 p-3">
+          <h6>{{ subText }}</h6>
+
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre *</label>
+            <input type="text" class="form-control" id="nombre" name="nombre">
+          </div>
+
+          <div class="mb-3">
+            <label for="empresa" class="form-label">Empresa *</label>
+            <input type="text" class="form-control" id="empresa" name="empresa">
+          </div>
+
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo Electrónico *</label>
+            <input type="email" class="form-control" id="correo" name="correo">
+          </div>
+
+          <div class="mb-3">
+            <label for="telefono" class="form-label">Teléfono de contacto *</label>
+            <input type="text" class="form-control" id="telefono" name="telefono">
+          </div>
+
+          <div class="mb-3">
+            <label for="tipo" class="form-label">Tipo de petición *</label>
+            <select class="form-select" name="tipo" id="tipo">
+              <option *ngFor="let tipo of optionList" [value]="tipo">{{ tipo }}</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje *</label>
+            <textarea class="form-control" id="mensaje" rows="3" name="mensaje"></textarea>
+          </div>
+
+          <button type="submit" id="btnEnviar" class="btn btn-primary">Enviar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Columna derecha -->
+    <div class="col-12 col-md-6">
+
+
+
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

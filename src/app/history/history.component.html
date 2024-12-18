@@ -1,0 +1,67 @@
+<app-navbar></app-navbar>
+
+<div class="container" style="padding-top: 40px;">
+  <h2 style="color: white;">
+    {{ mainTitle }}
+  </h2>
+</div>
+
+
+<div style=" padding-bottom: 20px;  ">
+
+  <div class="container" style="padding-top: 10px;">
+    <div class="card bg-transparent"
+         style="padding-left:40px; padding-right: 40px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8); background-color: rgba(255, 255, 255, 0.4); backdrop-filter: blur(10px);">
+
+      <div class="container col-md-8">
+        <h2 style="text-align: center;"> {{ subtitle1 }}
+
+        </h2>
+        <p style="font-family: sans-serif; font-size:18px;">
+          {{ mainText }}
+        </p>
+      </div>
+      <div class="container mt-4">
+        <div class="row" style="justify-content: center;">
+          <div class="col-md-4">
+            <h3 style="text-align: center;">{{ subtitle2 }}</h3>
+            <p style="font-family: sans-serif; font-size:18px;">
+              {{ formingCompanyText }}
+
+            </p>
+          </div>
+          <div class="col-md-4">
+            <img [ngSrc]="meetPhoto" alt="foto" width="500" height="350"/>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center mt-4" style="padding-bottom: 30px; ">
+        <div class="card"
+             style=" box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8); background-color: rgba(255, 255, 255, 0.4); backdrop-filter: blur(10px);">
+          <div class="card-body">
+            <h1 style="text-align: center;"> {{ subtitle3 }} </h1>
+            <p style="font-family: sans-serif; font-size:18px;">
+
+              {{ realityText }}
+
+
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <div style="padding-top: 10px;">
+    <h3 style="color: white; text-align: center;"> {{ sustainabilityTitle }}
+    </h3>
+  </div>
+</div>
+
+<app-footer></app-footer>
+

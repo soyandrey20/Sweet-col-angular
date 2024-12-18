@@ -1,0 +1,60 @@
+.all-footer{
+
+  width: 100%;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px;
+  text-align: center;
+
+}
+
+
+h3 {
+  color: black;
+}
+
+.bi-instagram, .bi-facebook, .bi-twitter-x, .bi-youtube, .bi-whatsapp {
+  padding: 10px;
+  font-size: 30px;
+}
+
+.social-links a {
+  color: white;
+}
+.social-links a:hover {
+  color: black;
+}
+
+.information a{
+  color: white;
+}
+
+.information a:hover{
+  color: black;
+}
+
+.derechos {
+  padding-top: 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.30);
+  color: black;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+  footer {
+    .bi-instagram, .bi-facebook, .bi-twitter-x, .bi-youtube, .bi-whatsapp {
+      padding: 10px;
+      font-size: 15px;
+    }
+
+    .social-links {
+      padding-top: 30px;
+    }
+  }
+
+
+}

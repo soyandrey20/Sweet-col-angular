@@ -1,0 +1,57 @@
+
+:host {
+  position: relative; /* Asegura que el navbar sea relativo a su dropdown */
+  z-index: 1000; /* Mayor a cualquier otro contenido de la página */
+}
+
+
+.navbar {
+  backdrop-filter: blur(30px) !important;
+  box-shadow: 0 0 30px rgba(227, 228, 237, 0.37) !important;
+  background-color: rgba(255, 255, 255, 0.8) !important; /* Set background to transparent */
+  border: none !important; /* Remove border */
+  position: sticky !important;
+  top: 0 !important;
+  border-radius: 15px;
+  padding: 10px 50px 10px 50px;
+}
+
+
+.dropdown {
+
+  z-index: 1000; /* Asegúrate de que sea mayor al z-index del body o elementos circundantes */
+
+
+}
+
+.dropdown-menu {
+  box-shadow: 0 0 30px rgba(227, 228, 237, 0.5) !important;
+  background-color: rgba(255, 255, 255, 0.8) !important; /* Set background to transparent */
+  border: none !important;
+}
+
+
+.navbar-nav .nav-link {
+  color: black;
+  /* Cambia este valor al color que prefieras */
+}
+
+.navbar-nav .nav-link:hover {
+  color: darkslategray;
+  /* Color al hacer hover */
+}
+
+
+@media (max-width: 576px) {
+  .navbar-nav {
+    text-align: center; /* Centra los links en pantallas pequeñas */
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: black;
+  }
+
+  .btn {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+  <h1 style="font-size: 40px; ">
+    {{ textTitle }}
+  </h1>
+  <div style=" padding-bottom: 20px;  ">
+    <div class="card   "
+         style="padding-left:40px; padding-right: 40px; background-color: rgba(255, 255, 255, 0.4); backdrop-filter: blur(10px);">
+      <div class="row" style="justify-content: center;">
+        <div class="col-md-5" style="text-align: center;">
+          <h1> {{ misionTitle }}</h1>
+          <p>
+            {{ misionText }}
+
+          </p>
+        </div>
+        <div class="col-md-5" style="text-align: center;">
+          <h1>{{ visionTitle }}</h1>
+          <p>
+
+            {{ visionText }}
+          </p>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center" style="padding-bottom: 20px; ">
+        <div class="card  card-details">
+          <div class="card-body">
+            <h1 style="text-align: center;"></h1>
+            <p>
+              <strong>{{ title1 }} </strong>
+              {{ text1 }}
+            </p>
+            <p>
+              <strong> {{ title2 }} </strong>
+              {{ text2 }}
+            </p>
+            <p>
+              <strong>{{ title3 }} </strong>
+
+              {{ text3 }}
+            </p>
+            <p>
+              <strong>{{ title4 }} </strong>
+              {{ text4 }}
+
+
+            </p>
+            <p>
+              <Strong> {{ title5 }}</Strong>
+              {{ text5 }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div style="padding-top: 10px;">
+      <h3 style="  text-align: center;">{{ subText }}
+      </h3>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

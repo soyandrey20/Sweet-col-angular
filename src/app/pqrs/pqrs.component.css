@@ -1,0 +1,16 @@
+
+.container-fluid {
+  padding-left: 100px;
+}
+
+
+@media (max-width: 576px) {
+  .container-fluid {
+    padding-left: 15px;
+  }
+
+  p {
+    text-align: center;
+    font-size: 15px;
+  }
+}

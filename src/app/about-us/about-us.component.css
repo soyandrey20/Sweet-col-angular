@@ -1,0 +1,20 @@
+
+.card-details {
+  width: 50%;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+
+
+}
+
+
+p {
+  font-family: sans-serif;
+  font-size: 20px;
+
+}
+
+@media (max-width: 576px) {
+  .card-details {
+    width: 100%;
+  }
+}
