@@ -1,0 +1,118 @@
+<app-navbar></app-navbar>
+
+<div style="padding-bottom: 15px;">
+  <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="p-4 rounded-5 text-secondary shadow"
+           style="background-color: rgba(255, 255, 255, 0.4); backdrop-filter: blur(10px);">
+        <div class="custom-container text-secondary">
+          <div class="text-center fs-3 fw-bold text-dark">Educación</div>
+
+          <!-- Títulos Obtenidos -->
+          <div class="input-group mt-3" style="width: 400px;">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-book'></i>
+            </div>
+            <input class="form-control bg-light" type="text" placeholder="Títulos Obtenidos"
+                   id="titulosObtenidos" name="titulosObtenidos" [(ngModel)]="educationInfo.titulosObtenidos"
+                   required/>
+          </div>
+          <small
+            *ngIf="registerForm.submitted && registerForm.form.controls['nivelEducacion']?.invalid"
+            class="form-text text-danger">
+            Seleccione un nivel de educación.
+          </small>
+
+
+          <!-- Nivel de Educación -->
+          <div class="input-group mt-3">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-school'></i>
+            </div>
+            <select class="form-select bg-light" id="nivelEducacion" name="nivelEducacion"
+                    [(ngModel)]="educationInfo.nivelEducacion" required>
+              <option selected disabled>Nivel de Educación</option>
+              <option value="Primaria">Primaria</option>
+              <option value="Bachillerato">Bachillerato</option>
+              <option value="Tecnico">Técnico</option>
+              <option value="Pregrado">Pregrado</option>
+              <option value="Posgrado">Posgrado</option>
+            </select>
+          </div>
+          <small *ngIf=" registerForm.submitted && registerForm.controls[' nivelEducacion']?.invalid"
+                 class="form-text text-danger">
+            Seleccione un nivel de educación.
+          </small>
+
+          <!-- Áreas de Estudio -->
+          <div class="input-group mt-3">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-graduation'></i>
+            </div>
+            <input class="form-control bg-light" type="text" placeholder="Áreas de Estudio"
+                   id="areasEstudio" name="areasEstudio" [(ngModel)]="educationInfo.areasEstudio" required/>
+          </div>
+          <small *ngIf="registerForm.submitted && registerForm.controls['areasEstudio']?.invalid"
+                 class="form-text text-danger">
+            Este campo es obligatorio.
+          </small>
+
+          <!-- Empresa Anterior -->
+          <div class="input-group mt-3">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-building'></i>
+            </div>
+            <input class="form-control bg-light" type="text" placeholder="Empresa Anterior"
+                   id="empresasAnteriores" name="empresasAnteriores" [(ngModel)]="educationInfo.empresasAnteriores"
+                   required/>
+          </div>
+
+          <!-- Cargo Desempeñado -->
+          <div class="input-group mt-3">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-briefcase'></i>
+            </div>
+            <input class="form-control bg-light" type="text" placeholder="Cargo Desempeñado"
+                   id="cargosDesempenados" name="cargosDesempenados" [(ngModel)]="educationInfo.cargosDesempenados"
+                   required/>
+          </div>
+
+          <!-- Funciones -->
+          <div class="input-group mt-3">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-task'></i>
+            </div>
+            <input class="form-control bg-light" type="text" placeholder="Funciones" id="funciones"
+                   name="funciones" [(ngModel)]="educationInfo.funciones" required/>
+
+          </div>
+
+          <!-- Tiempo de Servicio -->
+          <div class="input-group mt-3">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-calendar'></i>
+            </div>
+            <input class="form-control bg-light" type="text" placeholder="Tiempo de Servicio"
+                   id="tiempoServicio" name="tiempoServicio" [(ngModel)]="educationInfo.tiempoServicio" required/>
+          </div>
+
+          <!-- Logros -->
+          <div class="input-group mt-3">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-medal'></i>
+            </div>
+            <input class="form-control bg-light" type="text" placeholder="Logros"
+                   id="logros" name="logros" [(ngModel)]="educationInfo.logros" required/>
+          </div>
+
+          <!-- Botón Registrar -->
+          <button class="btn btn-success text-white w-100 mt-3 fw-semibold shadow-sm"
+                  [disabled]="!registerForm.valid">
+            Continuar
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

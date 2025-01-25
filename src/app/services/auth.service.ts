@@ -13,6 +13,8 @@ export class AuthService {
   constructor(private http: HttpClient) {
   }
 
+
+
   //Metodo para registrar
   register(registerData: RegisterData): Observable<any> {
     const {emailConfirm, passwordConfirm, ...payload} = registerData;

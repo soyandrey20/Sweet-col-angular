@@ -1,0 +1,345 @@
+<app-navbar></app-navbar>
+
+<div style="padding-bottom: 15px;">
+  <form onsubmit="return false;">
+    <div class="d-flex justify-content-center align-items-center">
+      <div class=" p-4 rounded-5 text-secondary shadow"
+           style="background-color: rgba(255, 255, 255, 0.4); backdrop-filter: blur(10px);">
+        <div class="custom-container text-secondary">
+          <div class="text-center fs-3 fw-bold text-dark"> Personal nuevo</div>
+
+
+          <div class="input-group mt-3" style="width: 400px;">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-id-card'></i>
+            </div>
+            <input class="form-control bg-light" type="text" placeholder="# Cédula" id="cedula"/>
+          </div>
+
+          <div class="input-group mt-3">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-user'></i>
+            </div>
+            <input class="form-control bg-light" type="text" placeholder="Nombre Completo"
+                   id="nombreCompleto"/>
+          </div>
+          <small class="form-text text-danger" id="msgNombreCompleto"></small>
+
+
+          <small class="form-text text-danger" id="msgCedula"></small>
+          <div class="input-group mt-3">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-user-detail'></i>
+            </div>
+
+            <select name="SelectGenero" id="SelectGenero" class="form-control bg-light">
+              <option value="0">Género</option>
+              <option value="Femenino">Femenino</option>
+              <option value="Masculino">Masculino</option>
+              <option value="Otro">Otro</option>
+
+            </select>
+          </div>
+
+          <small class="form-text text-danger" id="msgTpPersona"></small>
+
+          <!--Estado civil-->
+          <div class="input-group mt-3 ">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-user-detail'></i>
+            </div>
+            <select name="SelectEstadoCivil" id="SelectEstadoCivil" class="form-control bg-light">
+              <option value="0">Seleccione el Estado Civil...</option>
+              <option value="Soltero">Soltero</option>
+              <option value="Casado">Casado</option>
+              <option value="Divorciado">Divorciado</option>
+              <option value="Viudo">Viudo</option>
+
+            </select>
+          </div>
+          <small class="form-text text-danger" id="msgEstadoCivil"></small>
+
+
+          <div class="input-group mt-3">
+            <div class="input-group-text bg-success">
+              <i class='bx bx-envelope'></i>
+            </div>
+            <input class="form-control bg-light" type="email" placeholder="Correo" id="email"/>
+
+          </div>
+          <small class="form-text text-danger" id="msgEmail"></small>
+
+          <!--Fecha de nacimiento-->
+          <div class="input-group mt-3">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-calendar'></i>
+            </div>
+            <input class="form-control bg-light" type="date" placeholder="Fecha de nacimiento"
+                   id="fechaNacimiento"/>
+
+          </div>
+          <small class="form-text text-danger" id="msgFechaNacimiento"></small>
+          <!--direccion-->
+          <div class="input-group mt-3">
+            <div class="input-group-text bg-success">
+              <i class='bx bx-map'></i>
+            </div>
+            <input class="form-control bg-light" type="text" placeholder="Dirección" id="direccion"/>
+          </div>
+
+
+          <small class="form-text text-danger" id="msgDireccion"></small>
+          <!--telefono-->
+          <div class="input-group mt-3">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-phone'></i>
+            </div>
+            <input class="form-control bg-light" type="number" placeholder="Teléfono" id="telefono"/>
+          </div>
+
+          <small class="form-text text-danger" id="msgTelefono"></small>
+
+
+          <div class="input-group mt-3" style=" width: 400px;">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-book'></i>
+            </div>
+            <textarea class="form-control bg-light" type="text" placeholder="Títulos Obtenidos"
+                      id="titulosObtenidos" style="resize: none; height: 10px;"></textarea>
+          </div>
+
+          <div class="input-group mt-3">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-school'></i>
+            </div>
+            <select class="form-select bg-light" id="nivelEducacion">
+              <option selected disabled>Nivel de Educación</option>
+              <option value="Primaria">Primaria</option>
+              <option value="Bachillerato">Bachillerato</option>
+              <option value="Tecnico">Técnico</option>
+              <option value="Pregrado">Pregrado</option>
+              <option value="Posgrado">Posgrado</option>
+            </select>
+          </div>
+
+
+          <div class="input-group mt-3">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-graduation'></i>
+            </div>
+            <input class="form-control bg-light" type="text" placeholder="Áreas de Estudio" id="areasEstudio"/>
+          </div>
+
+
+          <div class="input-group mt-3">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-building'></i>
+            </div>
+            <input class="form-control bg-light" type="text" placeholder="Empresa Anterior"
+                   id="empresasAnteriores"/>
+          </div>
+          <small class="form-text text-danger" id="msgEmpresasAnteriores"></small>
+
+          <div class="input-group mt-3">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-briefcase'></i>
+            </div>
+            <input class="form-control bg-light" type="text" placeholder="Cargo Desempeñado"
+                   id="cargosDesempenados"/>
+          </div>
+          <small class="form-text text-danger" id="msgCargosDesempenados"></small>
+
+          <div class="input-group mt-3">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-task'></i>
+            </div>
+            <textarea class="form-control bg-light" type="text" placeholder="Funciones" id="funciones"
+                      style="resize:none ; height: 10px;"></textarea>
+          </div>
+          <small class="form-text text-danger" id="msgFunciones"></small>
+
+          <div class="input-group mt-3">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-calendar'></i>
+            </div>
+            <input class="form-control bg-light" type="text" placeholder="Tiempo de Servicio"
+                   id="tiempoServicio"/>
+          </div>
+          <small class="form-text text-danger" id="msgTiempoServicio"></small>
+
+          <div class="input-group mt-3">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-medal'></i>
+            </div>
+            <input class="form-control bg-light" type="text" placeholder="Logros" id="logros"/>
+          </div>
+          <small class="form-text text-danger" id="msgLogros"></small>
+
+
+          <div class="input-group mt-3" style="width: 400px;">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-software'></i>
+            </div>
+            <input class="form-control bg-light" type="text" placeholder="Dominio de Software"
+                   id="dominioSoftware"/>
+          </div>
+
+          <div class="input-group mt-3">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-wrench'></i>
+            </div>
+            <input class="form-control bg-light" type="text" placeholder="Herramientas" id="herramientas"/>
+          </div>
+
+          <div class="input-group mt-3">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-code'></i>
+            </div>
+            <input class="form-control bg-light" type="text" placeholder="Lenguajes de Programación"
+                   id="lenguajesProgramacion"/>
+          </div>
+
+          <div class="row" style="width: 400px;">
+            <div class="col-md-5 mt-3 ">
+
+              <label class="form-check-label">Comunicación</label>
+            </div>
+
+
+            <div class="col-md-6 mt-3">
+
+              <input class="form-check-input" type="radio" name="comunicacion" value="1"> 1
+              <input class="form-check-input" type="radio" name="comunicacion" value="2"> 2
+              <input class="form-check-input" type="radio" name="comunicacion" value="3"> 3
+              <input class="form-check-input" type="radio" name="comunicacion" value="4"> 4
+              <input class="form-check-input" type="radio" name="comunicacion" value="5"> 5
+
+            </div>
+
+
+            <div class="col-md-5 mt-3 ">
+
+              <label class="form-check-label">Liderazgo</label>
+
+            </div>
+
+
+            <div class="col-md-6 mt-3">
+
+              <input class="form-check-input" type="radio" name="liderazgo" value="1"> 1
+              <input class="form-check-input" type="radio" name="liderazgo" value="2"> 2
+              <input class="form-check-input" type="radio" name="liderazgo" value="3"> 3
+              <input class="form-check-input" type="radio" name="liderazgo" value="4"> 4
+              <input class="form-check-input" type="radio" name="liderazgo" value="5"> 5
+
+            </div>
+            <div class="col-md-5 mt-3 ">
+              <label class="form-check-label">Trabajo en Equipo</label>
+
+            </div>
+
+
+            <div class="col-md-6 mt-3">
+              <input class="form-check-input" type="radio" name="trabajoEquipo" value="1"> 1
+              <input class="form-check-input" type="radio" name="trabajoEquipo" value="2"> 2
+              <input class="form-check-input" type="radio" name="trabajoEquipo" value="3"> 3
+              <input class="form-check-input" type="radio" name="trabajoEquipo" value="4"> 4
+              <input class="form-check-input" type="radio" name="trabajoEquipo" value="5"> 5
+
+            </div>
+            <div class="col-md-5 mt-3 ">
+              <label class="form-check-label">Resolución de Problemas</label>
+
+            </div>
+
+
+            <div class="col-md-6 mt-3">
+              <input class="form-check-input" type="radio" name="resolucionProblemas" value="1"> 1
+              <input class="form-check-input" type="radio" name="resolucionProblemas" value="2"> 2
+              <input class="form-check-input" type="radio" name="resolucionProblemas" value="3"> 3
+              <input class="form-check-input" type="radio" name="resolucionProblemas" value="4"> 4
+              <input class="form-check-input" type="radio" name="resolucionProblemas" value="5"> 5
+
+            </div>
+          </div>
+
+          <!-- referencias-->
+
+
+          <div class="input-group mt-3" style="width: 400px;">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-user'></i>
+            </div>
+            <input class="form-control bg-light" type="text" placeholder="Nombres" id="nombreReferencia"/>
+          </div>
+
+          <div class="input-group mt-3">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-briefcase'></i>
+            </div>
+            <input class="form-control bg-light" type="text" placeholder="Cargo" id="cargo"/>
+          </div>
+
+          <div class="input-group mt-3">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-building'></i>
+            </div>
+            <input class="form-control bg-light" type="text" placeholder="Empresa" id="empresa"/>
+          </div>
+
+          <div class="input-group mt-3">
+            <div class="input-group-text bg-success">
+              <i class='bx bxs-phone'></i>
+            </div>
+            <input class="form-control bg-light" type="text" placeholder="Teléfono de Contacto" id="telefonosContacto"/>
+          </div>
+
+          <div class="row" style="width: 400px;">
+            <div class="col-md-5 mt-3 ">
+              <label class="form-check-label">Pruebas Psicológicas</label>
+            </div>
+            <div class="col-md-6 mt-3">
+              <input class="form-check-input" type="radio" name="pruebasPsicologicas" value="1"> 1
+              <input class="form-check-input" type="radio" name="pruebasPsicologicas" value="2"> 2
+              <input class="form-check-input" type="radio" name="pruebasPsicologicas" value="3"> 3
+              <input class="form-check-input" type="radio" name="pruebasPsicologicas" value="4"> 4
+              <input class="form-check-input" type="radio" name="pruebasPsicologicas" value="5"> 5
+            </div>
+            <div class="col-md-5 mt-3 ">
+              <label class="form-check-label">Pruebas Técnicas</label>
+            </div>
+            <div class="col-md-6 mt-3">
+              <input class="form-check-input" type="radio" name="pruebasTecnicas" value="1"> 1
+              <input class="form-check-input" type="radio" name="pruebasTecnicas" value="2"> 2
+              <input class="form-check-input" type="radio" name="pruebasTecnicas" value="3"> 3
+              <input class="form-check-input" type="radio" name="pruebasTecnicas" value="4"> 4
+              <input class="form-check-input" type="radio" name="pruebasTecnicas" value="5"> 5
+            </div>
+            <div class="col-md-5 mt-3 ">
+              <label class="form-check-label">Pruebas de Conocimiento</label>
+            </div>
+            <div class="col-md-6 mt-3">
+              <input class="form-check-input" type="radio" name="pruebasConocimiento" value="1"> 1
+              <input class="form-check-input" type="radio" name="pruebasConocimiento" value="2"> 2
+              <input class="form-check-input" type="radio" name="pruebasConocimiento" value="3"> 3
+              <input class="form-check-input" type="radio" name="pruebasConocimiento" value="4"> 4
+              <input class="form-check-input" type="radio" name="pruebasConocimiento" value="5"> 5
+            </div>
+          </div>
+
+
+          <button class="btn btn-success text-white w-100 mt-3 fw-semibold shadow-sm" id="addUsuario"
+                  disabled>
+            Registar
+          </button>
+        </div>
+
+
+      </div>
+    </div>
+
+  </form>
+</div>
+
+
+<app-footer></app-footer>

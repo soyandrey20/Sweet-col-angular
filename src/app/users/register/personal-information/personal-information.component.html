@@ -1,0 +1,135 @@
+<app-navbar></app-navbar>
+
+<form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="p-4 rounded-5 text-secondary shadow"
+         style="background-color: rgba(255, 255, 255, 0.4); backdrop-filter: blur(10px);">
+      <div class="custom-container text-secondary">
+        <div class="text-center fs-3 fw-bold text-dark">Información Personal</div>
+
+        <!-- Cédula -->
+        <div class="input-group mt-3" style="width: 400px;">
+          <div class="input-group-text bg-success">
+            <i class='bx bxs-id-card'></i>
+          </div>
+          <input class="form-control bg-light" type="text" placeholder="# Cédula" id="cedula"
+                 [(ngModel)]="personalInfo.id" name="cedula" required pattern="^[0-9]+$"/>
+        </div>
+        <small *ngIf="registerForm.submitted && registerForm.controls[' cedula']?.invalid"
+               class="form-text text-danger">
+          La cédula es requerida y debe contener solo números.
+        </small>
+
+        <!-- Nombre Completo -->
+        <div class="input-group mt-3">
+          <div class="input-group-text bg-success">
+            <i class='bx bxs-user'></i>
+          </div>
+          <input class="form-control bg-light" type="text" placeholder="Nombre Completo" id="nombreCompleto"
+                 [(ngModel)]="personalInfo.name" name="nombreCompleto" required minlength="3"/>
+        </div>
+        <small *ngIf="registerForm.submitted && registerForm.controls['nombreCompleto']?.invalid"
+               class="form-text text-danger">
+          El nombre es requerido y debe tener al menos 3 caracteres.
+        </small>
+
+        <!-- Género -->
+        <div class="input-group mt-3">
+          <div class="input-group-text bg-success">
+            <i class='bx bxs-user-detail'></i>
+          </div>
+          <select name="genero" id="SelectGenero" class="form-control bg-light"
+                  [(ngModel)]="personalInfo.gender" required>
+            <option selected disabled>Género</option>
+            <option value="Femenino">Femenino</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+        <small *ngIf="registerForm.submitted && registerForm.controls['genero']?.invalid"
+               class="form-text text-danger">
+          Seleccione un género.
+        </small>
+
+        <!-- Estado Civil -->
+        <div class="input-group mt-3">
+          <div class="input-group-text bg-success">
+            <i class='bx bxs-user-detail'></i>
+          </div>
+          <select name="estadoCivil" id="SelectEstadoCivil" class="form-control bg-light"
+                  [(ngModel)]="personalInfo.civilStatus" required>
+            <option selected disabled>Seleccione el Estado Civil...</option>
+            <option value="Soltero">Soltero</option>
+            <option value="Casado">Casado</option>
+            <option value="Divorciado">Divorciado</option>
+            <option value="Viudo">Viudo</option>
+          </select>
+        </div>
+        <small *ngIf="registerForm.submitted && registerForm.controls['estadoCivil']?.invalid"
+               class="form-text text-danger">
+          Seleccione un estado civil.
+        </small>
+
+        <!-- Correo -->
+        <div class="input-group mt-3">
+          <div class="input-group-text bg-success">
+            <i class='bx bx-envelope'></i>
+          </div>
+          <input class="form-control bg-light" type="email" placeholder="Correo" id="email"
+                 [(ngModel)]="personalInfo.email" name="email" required email/>
+        </div>
+        <small *ngIf="registerForm.submitted && registerForm.controls['email']?.invalid"
+               class="form-text text-danger">
+          Ingrese un correo válido.
+        </small>
+
+        <!-- Fecha de Nacimiento -->
+        <div class="input-group mt-3">
+          <div class="input-group-text bg-success">
+            <i class='bx bxs-calendar'></i>
+          </div>
+          <input class="form-control bg-light" type="date" placeholder="Fecha de nacimiento"
+                 id="fechaNacimiento" [(ngModel)]="personalInfo.birthDate" name="fechaNacimiento" required/>
+        </div>
+        <small *ngIf="registerForm.submitted && registerForm.controls['fechaNacimiento']?.invalid"
+               class="form-text text-danger">
+          Seleccione una fecha de nacimiento.
+        </small>
+
+        <!-- Dirección -->
+        <div class="input-group mt-3">
+          <div class="input-group-text bg-success">
+            <i class='bx bx-map'></i>
+          </div>
+          <input class="form-control bg-light" type="text" placeholder="Dirección" id="direccion"
+                 [(ngModel)]="personalInfo.address" name="direccion" required/>
+        </div>
+        <small *ngIf="registerForm.submitted && registerForm.controls['direccion']?.invalid"
+               class="form-text text-danger">
+          La dirección es requerida.
+        </small>
+
+        <!-- Teléfono -->
+        <div class="input-group mt-3">
+          <div class="input-group-text bg-success">
+            <i class='bx bxs-phone'></i>
+          </div>
+          <input class="form-control bg-light" type="number" placeholder="Teléfono" id="telefono"
+                 [(ngModel)]="personalInfo.phone" name="telefono" required pattern="^[0-9]{10}$"/>
+        </div>
+        <small *ngIf="registerForm.submitted && registerForm.controls['telefono']?.invalid"
+               class="form-text text-danger">
+          Ingrese un teléfono válido de 10 dígitos.
+        </small>
+
+        <!-- Botón Continuar -->
+        <button class="btn btn-success text-white w-100 mt-3 fw-semibold shadow-sm"
+                id="addUsuario" [disabled]="!registerForm.valid">
+          Continuar
+        </button>
+      </div>
+    </div>
+  </div>
+
+</form>

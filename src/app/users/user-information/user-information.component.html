@@ -1,0 +1,7 @@
+<app-navbar></app-navbar>
+
+
+<div *ngIf="loading">Cargando datos...</div>
+<app-table *ngIf="!loading" [columns]="tableColumns" [data]="tableData"> </app-table>
+
+<app-footer></app-footer>

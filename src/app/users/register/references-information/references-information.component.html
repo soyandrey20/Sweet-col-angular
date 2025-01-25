@@ -1,0 +1,181 @@
+<app-navbar></app-navbar>
+
+
+<form #form="ngForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="p-4 rounded-5 text-secondary shadow"
+         style="background-color: rgba(255, 255, 255, 0.4); backdrop-filter: blur(10px);">
+      <div class="custom-container text-secondary">
+        <div class="text-center fs-3 fw-bold text-dark"> Pruebas</div>
+
+        <div class="row rebase" style="width: 400px;">
+          <!-- Comunicación -->
+          <div class="col-md-5 mt-3">
+            <label class="form-check-label">Comunicación</label>
+          </div>
+          <div class="col-md-6 mt-3">
+            <label *ngFor="let value of ratings">
+              <input class="form-check-input" type="radio" name="comunicacion" [value]="value"
+                     [(ngModel)]="selectedRatingC" required>
+              {{ value }}
+            </label>
+          </div>
+
+          <!-- Repite la misma estructura para cada categoría -->
+          <!-- Liderazgo -->
+          <div class="col-md-5 mt-3">
+            <label class="form-check-label">Liderazgo</label>
+          </div>
+          <div class="col-md-6 mt-3">
+            <label *ngFor="let value of ratings">
+              <input class="form-check-input" type="radio" name="liderazgo" [value]="value"
+                     [(ngModel)]="selectedRatingL" required>
+              {{ value }}
+            </label>
+          </div>
+
+          <div class="col-md-5 mt-3 ">
+            <label class="form-check-label">Trabajo en Equipo</label>
+
+          </div>
+
+
+          <div class="col-md-6 mt-3">
+            <label *ngFor="let value of ratings">
+              <input class="form-check-input" type="radio" name="trabajoEquipo" [value]="value"
+                     [(ngModel)]="selectedRatingT" required>
+              {{ value }}
+            </label>
+          </div>
+
+          <div class="col-md-5 mt-3 ">
+            <label class="form-check-label">Resolución de Problemas</label>
+
+          </div>
+
+          <div class="col-md-6 mt-3">
+            <label *ngFor="let value of ratings">
+              <input class="form-check-input" type="radio" name="resolucionProblemas" [value]="value"
+                     [(ngModel)]="selectedRatingR" required>
+              {{ value }}
+            </label>
+          </div>
+
+          <div class="col-md-5 mt-3 ">
+            <label class="form-check-label "> Psicológicas</label>
+          </div>
+
+          <div class="col-md-6 mt-3">
+            <label *ngFor="let value of ratings">
+              <input class="form-check-input" type="radio" name="pruebasPsicologicas" [value]="value"
+                     [(ngModel)]="selectedRatingP" required>
+              {{ value }}
+            </label>
+          </div>
+
+          <div class="col-md-5 mt-3 ">
+            <label class="form-check-label"> Técnicas</label>
+          </div>
+
+          <div class="col-md-6 mt-3">
+            <label *ngFor="let value of ratings">
+              <input class="form-check-input" type="radio" name="pruebasTecnicas" [value]="value"
+                     [(ngModel)]="selectedRatingTE" required>
+              {{ value }}
+            </label>
+          </div>
+
+          <div class="col-md-5 mt-3 ">
+            <label class="form-check-label"> Conocimiento</label>
+          </div>
+
+          <div class="col-md-6 mt-3">
+            <label *ngFor="let value of ratings">
+              <input class="form-check-input" type="radio" name="pruebasConocimiento" [value]="value"
+                     [(ngModel)]="selectedRatingCO" required>
+              {{ value }}
+            </label>
+          </div>
+
+
+          <!-- Agrega aquí las demás categorías de forma similar -->
+          <!-- Trabajo en Equipo, Resolución de Problemas, Psicológicas, etc. -->
+
+        </div>
+
+        <div class="text-center fs-3 fw-bold text-dark"> Referencias</div>
+
+        <!-- Nombre de la Referencia -->
+        <div class="input-group mt-1" style="width: 400px;">
+          <div class="input-group-text bg-success">
+            <i class="bx bxs-user"></i>
+          </div>
+          <input
+            class="form-control bg-light"
+            type="text"
+            placeholder="Nombres"
+            id="nombreReferencia"
+            [(ngModel)]="referencesInfo.nombreReferencia"
+            name="nombreReferencia"
+            required
+          />
+        </div>
+        <div *ngIf="form.submitted && !form.controls['nombreReferencia']?.valid" class="text-danger">
+          El nombre es obligatorio.
+        </div>
+
+        <!-- Cargo -->
+        <div class="input-group mt-3">
+          <div class="input-group-text bg-success">
+            <i class="bx bxs-briefcase"></i>
+          </div>
+          <input
+            class="form-control bg-light"
+            type="text"
+            placeholder="Cargo"
+            id="cargo"
+            [(ngModel)]="referencesInfo.cargo"
+            name="cargo"
+            required
+          />
+        </div>
+        <div *ngIf="form.submitted && !form.controls['cargo']?.valid" class="text-danger">
+          El cargo es obligatorio.
+        </div>
+
+        <!-- Empresa -->
+        <div class="input-group mt-3">
+          <div class="input-group-text bg-success">
+            <i class="bx bxs-building"></i>
+          </div>
+          <input class="form-control bg-light" type="text" placeholder="Empresa" id="empresa"
+                 [(ngModel)]="referencesInfo.empresa" name="empresa" required/>
+        </div>
+        <div *ngIf="form.submitted && !form.controls['empresa']?.valid" class="text-danger">
+          La empresa es obligatoria.
+        </div>
+
+        <!-- Teléfono -->
+        <div class="input-group mt-3">
+          <div class="input-group-text bg-success">
+            <i class="bx bxs-phone"></i>
+          </div>
+          <input class="form-control bg-light" type="text" placeholder="Teléfono de Contacto" id="telefonosContacto"
+                 [(ngModel)]="referencesInfo.telefonosContacto" name="telefonosContacto" required/>
+        </div>
+        <div *ngIf="form.submitted && !form.controls['telefonosContacto']?.valid" class="text-danger">
+          El teléfono es obligatorio.
+        </div>
+
+        <!-- Botón Registrar -->
+        <button
+          class="btn btn-success text-white w-100 mt-3 fw-semibold shadow-sm"
+          id="addUsuario"
+          [disabled]="form.invalid"
+        >
+          Registrar
+        </button>
+      </div>
+    </div>
+  </div>
+</form>
